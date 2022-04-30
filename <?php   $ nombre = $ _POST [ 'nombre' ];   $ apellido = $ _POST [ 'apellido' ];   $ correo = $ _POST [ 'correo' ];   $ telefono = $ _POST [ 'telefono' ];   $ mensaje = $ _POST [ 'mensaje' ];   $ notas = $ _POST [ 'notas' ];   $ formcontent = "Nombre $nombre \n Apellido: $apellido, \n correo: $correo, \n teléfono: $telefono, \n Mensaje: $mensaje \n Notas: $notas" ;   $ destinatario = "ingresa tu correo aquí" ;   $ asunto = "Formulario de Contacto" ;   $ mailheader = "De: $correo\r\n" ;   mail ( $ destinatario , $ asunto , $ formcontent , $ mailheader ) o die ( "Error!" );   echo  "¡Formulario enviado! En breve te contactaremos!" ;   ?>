@@ -1,0 +1,14 @@
+<?php
+  $ nombre = $ _POST [ 'nombre' ];
+  $ apellido = $ _POST [ 'apellido' ];
+  $ correo = $ _POST [ 'correo' ];
+  $ telefono = $ _POST [ 'telefono' ];
+  $ mensaje = $ _POST [ 'mensaje' ];
+  $ notas = $ _POST [ 'notas' ];    
+  $ formcontent = "Nombre $nombre \n Apellido: $apellido, \n correo: $correo, \n teléfono: $telefono, \n Mensaje: $mensaje \n Notas: $notas" ;
+  $ destinatario = "gerardmof@gmail.com ";
+  $ asunto = "Hernandez Paz Aremi"
+  $ mailheader = "De: $correo\r\n" ;
+  mail ( $ destinatario , $ asunto , $ formcontent , $ mailheader ) o die ( "Error!" );
+  echo  "¡Formulario enviado! En breve te contactaremos!" ;
+  ?>
